@@ -4,26 +4,26 @@ import java.util.function.Consumer;
 import java.util.function.Predicate;
 
 /**
- * Demonstrates functional programming concepts using lambdas, higher-order functions,
- * and stream processing. The class includes a `Runnable` that prints a message, a
- * `BinaryOperation` for calculating the sum of two integers, a list of strings
- * processed with various interfaces, and a `Consumer` that converts strings to
- * uppercase. These lambda expressions enable concise and flexible code execution.
+ * Demonstrates various functional programming concepts using lambdas, higher-order
+ * functions, and stream processing. The class defines a `Runnable` instance that
+ * prints "Hello, Lambda!" when run, a binary operation that calculates the sum of
+ * two integers, and processes a list of strings using different functional interfaces.
  */
 public class LambdaDemo {
 
     /**
-     * Demonstrates several features of Java programming language, including lambda
-     * expressions, method references, streams, and consumers. Lambda expression `hello`
-     * prints "Hello, Lambda!", while method reference `add` performs addition and
-     * calculates the result. The `names` list is processed using `forEach()` and `stream().filter()`.
+     * Demonstrates various concepts in Java, including lambdas, method references,
+     * streams, and Predicate/Consumer interfaces. It prints "Hello, Lambda!" using a
+     * lambda expression, calculates the sum of 5 and 3 using a method reference, lists
+     * the names "Alice", "Bob", and "Charlie", filters them based on a Predicate to
+     * obtain names starting with 'A', and prints the uppercase versions of the names
+     * using Consumers.
      * 
-     * @param args 0 or more command-line arguments passed to the `main` function when
-     * it is executed directly from the command line, allowing the program to handle user
-     * input and execute accordingly.
+     * @param args program's command line arguments, which is not utilized in this code
+     * snippet.
      * 
-     * * Length: `args.length` = number of command-line arguments passed to the program.
-     * * Elements: Each element in `args` is a string representing a command-line argument.
+     * * Length: `args.length` is equal to 0 or 1.
+     * * Elements: Each element in `args` is a String.
      */
     public static void main(String[] args) {
         Runnable hello = () -> System.out.println("Hello, Lambda!");
@@ -49,7 +49,7 @@ public class LambdaDemo {
     }
 
     /**
-     * Defines an integer result calculation method for two input integers.
+     * Defines a method to calculate an integer result for two input integers.
      */
     interface BinaryOperation {
         int calculate(int a, int b);

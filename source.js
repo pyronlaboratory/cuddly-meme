@@ -1,21 +1,21 @@
 
 /**
- * @description Searches for an element in an array from a specified start index to
- * the end index by recursively dividing the search range into half and comparing the
- * element with the target value.
+ * @description Checks if a given value `x` exists within an array `arr` between two
+ * indices `start` and `end`. It recursively calls itself if the value is not found
+ * within the specified range.
  * 
- * @param {array} arr - array that contains the values to be searched for the specified
- * `x`.
+ * @param {array} arr - array that contains the elements to be searched for the
+ * specified `x`.
  * 
- * @param {integer} x - value being searched for in the array.
+ * @param {number} x - value being searched for in the array.
  * 
  * @param {integer} start - index of the left boundary of the subarray to be searched.
  * 
- * @param {integer} end - 2nd limit of the array's range to search for the specified
- * value `x`.
+ * @param {number} end - 2nd limit of the array's elements that the function will
+ * search for the specified value `x`.
  * 
- * @returns {boolean} a boolean value indicating whether the specified element exists
- * in the array.
+ * @returns {boolean} a boolean value indicating whether the target element `x` is
+ * present in the array between `start` and `end`.
  */
 const search = (arr, x, start, end) => {
   if (start > end) return false;
@@ -30,10 +30,9 @@ const search = (arr, x, start, end) => {
 
 
 /**
- * @description Retrieves the application ID from a parameter or a record based on
- * the provided value. It returns the retrieved app ID as a string.
+ * @description Retrieves and returns the application ID for a given parameter.
  * 
- * @returns {string} a unique identifier for an application.
+ * @returns {number} an app ID string.
  */
 const getApplicationID = () => {
   var appID = "";
@@ -47,14 +46,15 @@ const getApplicationID = () => {
 }
 
 /**
- * @description Takes an array of cell values as input and generates a new generation
- * of cells by iterating over the current generation's rows, keeping track of alive
- * neighbors and their count to determine if a cell is alive in the next generation.
+ * @description Generates a new population of cells based on the current cells and
+ * their neighbors, using a simple cellular automata rule.
  * 
- * @param {array} cells - 2D grid of cells to be evolved in the new generation.
+ * @param {array} cells - 2D grid of cells, which is used to generate the next
+ * generation of cells through a set of rules based on the alive and neighboring cells
+ * of each cell in the grid.
  * 
- * @returns {array} an array of booleans representing the fate of each cell in the
- * next generation.
+ * @returns {array} an array of alive cells in the next generation, determined by the
+ * cell's current state and its neighbors.
  */
 function newGeneration(cells) {
   const nextGeneration = []
