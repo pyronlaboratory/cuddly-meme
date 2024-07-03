@@ -4,30 +4,26 @@ import java.util.function.Consumer;
 import java.util.function.Predicate;
 
 /**
- * Has a main method that demonstrates various lambda expressions and their usage in
- * functional programming. The class includes a `Runnable` that prints a message to
- * the console, a `BinaryOperation` that calculates the sum of two integers, a `List`
- * of strings that are processed using a `Predicate`, and a `Consumer` that converts
- * strings to uppercase. These lambda expressions allow for concise and flexible code
- * execution.
+ * Demonstrates various functional programming concepts using lambdas, higher-order
+ * functions, and stream processing. The class defines a `Runnable` instance that
+ * prints "Hello, Lambda!" when run, a binary operation that calculates the sum of
+ * two integers, and processes a list of strings using different functional interfaces.
  */
 public class LambdaDemo {
 
     /**
-     * Demonstrates various functional programming concepts in Java, including lambdas,
-     * higher-order functions, and stream processing. Lambda expressions are used to
-     * create a `Runnable` instance that prints "Hello, Lambda!" when run, while the `add`
-     * method is a binary operation that takes two arguments and returns their sum. The
-     * `names` list is processed using various functional interfaces, such as
-     * `List<String>.forEach()` and `Stream.filter()`.
+     * Demonstrates various concepts in Java, including lambdas, method references,
+     * streams, and Predicate/Consumer interfaces. It prints "Hello, Lambda!" using a
+     * lambda expression, calculates the sum of 5 and 3 using a method reference, lists
+     * the names "Alice", "Bob", and "Charlie", filters them based on a Predicate to
+     * obtain names starting with 'A', and prints the uppercase versions of the names
+     * using Consumers.
      * 
-     * @param args 1-dimensional array of command-line arguments passed to the `main`
-     * function by the Java runtime when the program is launched directly from the command
-     * line, and it is ignored in this case as no operation is performed on it.
+     * @param args program's command line arguments, which is not utilized in this code
+     * snippet.
      * 
-     * * `args`: an array of strings representing command-line arguments passed to the program.
-     * * Length: varies (can be zero or more than zero).
-     * * Elements: each element is a string representing a separate argument.
+     * * Length: `args.length` is equal to 0 or 1.
+     * * Elements: Each element in `args` is a String.
      */
     public static void main(String[] args) {
         Runnable hello = () -> System.out.println("Hello, Lambda!");
@@ -53,8 +49,7 @@ public class LambdaDemo {
     }
 
     /**
-     * Defines a single method, calculate(int, int), which calculates an integer result
-     * for two input integers.
+     * Defines a method to calculate an integer result for two input integers.
      */
     interface BinaryOperation {
         int calculate(int a, int b);
