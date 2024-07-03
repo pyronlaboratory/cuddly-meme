@@ -1,19 +1,21 @@
 
 /**
- * @description Searches for an element `x` in a sorted array `arr` between indices
- * `start` and `end`. It returns `true` if `x` is found before index `mid`, otherwise
- * it recursively calls itself with the updated range.
+ * @description Searches for an element in an array from a specified start index to
+ * the end index by recursively dividing the search range into half and comparing the
+ * element with the target value.
  * 
- * @param {array} arr - 1D array to be searched for a specific element.
+ * @param {array} arr - array that contains the values to be searched for the specified
+ * `x`.
  * 
- * @param {number} x - value being searched for in the array.
+ * @param {integer} x - value being searched for in the array.
  * 
- * @param {number} start - index of the left edge of the subarray to search in.
+ * @param {integer} start - index of the left boundary of the subarray to be searched.
  * 
- * @param {number} end - 2nd point of the sorted array.
+ * @param {integer} end - 2nd limit of the array's range to search for the specified
+ * value `x`.
  * 
- * @returns {boolean} a boolean value indicating whether the element `x` is present
- * in the array between `start` and `end`.
+ * @returns {boolean} a boolean value indicating whether the specified element exists
+ * in the array.
  */
 const search = (arr, x, start, end) => {
   if (start > end) return false;
@@ -28,10 +30,10 @@ const search = (arr, x, start, end) => {
 
 
 /**
- * @description Retrieves an application ID based on a given parameter and logs the
- * result for debugging purposes.
+ * @description Retrieves the application ID from a parameter or a record based on
+ * the provided value. It returns the retrieved app ID as a string.
  * 
- * @returns {integer} an integer representing the application ID.
+ * @returns {string} a unique identifier for an application.
  */
 const getApplicationID = () => {
   var appID = "";
@@ -45,17 +47,14 @@ const getApplicationID = () => {
 }
 
 /**
- * @description Takes an array of cells as input, where each cell is a binary value
- * (0 or 1). It generates a new generation of cells by iterating over the existing
- * cells and updating the state of each cell based on its neighbors. The function
- * returns an array of cells in the new generation.
+ * @description Takes an array of cell values as input and generates a new generation
+ * of cells by iterating over the current generation's rows, keeping track of alive
+ * neighbors and their count to determine if a cell is alive in the next generation.
  * 
- * @param {array} cells - 2D array of cells that are being simulated, and it is used
- * to generate the next generation of cells through a process of cell division, growth,
- * and death.
+ * @param {array} cells - 2D grid of cells to be evolved in the new generation.
  * 
- * @returns {array} an array of booleans representing the alive cells in each row of
- * the next generation.
+ * @returns {array} an array of booleans representing the fate of each cell in the
+ * next generation.
  */
 function newGeneration(cells) {
   const nextGeneration = []

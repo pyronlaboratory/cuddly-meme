@@ -4,67 +4,76 @@
     "path": "source.java",
     "content": {
       "structured": {
-        "description": "Three examples of lambda expressions: A `Runnable` that prints \"Hello, Lambda!\" when run; a `BinaryOperation` that calculates the sum of two integers; and a `Predicate` that filters a list of strings based on their starting character. Additionally, it demonstrates how to use the `forEach()` method to apply a consumer function to an arraylist of strings in uppercase.",
+        "description": "Various functional programming concepts using lambda expressions and streams processing. It includes a `Runnable` that prints a message, a `BinaryOperation` that calculates the sum of two integers, a `List` of strings processed by a `Predicate`, and a `Consumer` that converts strings to uppercase. These lambda expressions allow for concise and flexible code execution.",
         "items": [
           {
-            "id": "52c1a909-eb02-c3be-9149-353642830240",
+            "id": "9c530f56-9cd8-878f-d54a-f1530190a185",
             "ancestors": [],
-            "description": "Has a main method that demonstrates various lambda expressions and their usage in functional programming. The class includes a `Runnable` that prints a message to the console, a `BinaryOperation` that calculates the sum of two integers, a `List` of strings that are processed using a `Predicate`, and a `Consumer` that converts strings to uppercase. These lambda expressions allow for concise and flexible code execution.",
+            "description": "Demonstrates functional programming concepts using lambdas, higher-order functions, and stream processing. The class includes a `Runnable` that prints a message, a `BinaryOperation` for calculating the sum of two integers, a list of strings processed with various interfaces, and a `Consumer` that converts strings to uppercase. These lambda expressions enable concise and flexible code execution.",
             "name": "LambdaDemo",
             "location": {
-              "start": 6,
+              "start": 14,
               "insert": 6,
               "offset": " ",
               "indent": 0,
-              "comment": null
+              "comment": {
+                "start": 5,
+                "end": 13
+              }
             },
             "item_type": "class",
-            "length": 29,
-            "docLength": null
+            "length": 49,
+            "docLength": 8
           },
           {
-            "id": "f3848af9-bdf1-5485-2641-8e8cef8b8000",
+            "id": "239d7ae6-74d8-7a85-904c-0ca8d4e7b1a3",
             "ancestors": [
-              "52c1a909-eb02-c3be-9149-353642830240"
+              "9c530f56-9cd8-878f-d54a-f1530190a185"
             ],
-            "description": "Demonstrates various functional programming concepts in Java, including lambdas, higher-order functions, and stream processing. Lambda expressions are used to create a `Runnable` instance that prints \"Hello, Lambda!\" when run, while the `add` method is a binary operation that takes two arguments and returns their sum. The `names` list is processed using various functional interfaces, such as `List<String>.forEach()` and `Stream.filter()`.",
+            "description": "Demonstrates several features of Java programming language, including lambda expressions, method references, streams, and consumers. Lambda expression `hello` prints \"Hello, Lambda!\", while method reference `add` performs addition and calculates the result. The `names` list is processed using `forEach()` and `stream().filter()`.",
             "params": [
               {
                 "name": "args",
                 "type_name": "String[]",
-                "description": "1-dimensional array of command-line arguments passed to the `main` function by the Java runtime when the program is launched directly from the command line, and it is ignored in this case as no operation is performed on it.\n\n* `args`: an array of strings representing command-line arguments passed to the program.\n* Length: varies (can be zero or more than zero).\n* Elements: each element is a string representing a separate argument.",
+                "description": "0 or more command-line arguments passed to the `main` function when it is executed directly from the command line, allowing the program to handle user input and execute accordingly.\n\n* Length: `args.length` = number of command-line arguments passed to the program.\n* Elements: Each element in `args` is a string representing a command-line argument.",
                 "complex_type": true
               }
             ],
             "name": "main",
             "location": {
-              "start": 8,
-              "insert": 8,
+              "start": 32,
+              "insert": 16,
               "offset": " ",
               "indent": 4,
-              "comment": null
+              "comment": {
+                "start": 15,
+                "end": 31
+              }
             },
             "item_type": "method",
             "length": 22,
-            "docLength": null
+            "docLength": 16
           },
           {
-            "id": "e52cef9b-622c-a7b6-5c47-df9e4c3c58aa",
+            "id": "484ff94d-4f92-ccab-f444-f702227c473c",
             "ancestors": [
-              "52c1a909-eb02-c3be-9149-353642830240"
+              "9c530f56-9cd8-878f-d54a-f1530190a185"
             ],
-            "description": "Defines a single method, calculate(int, int), which calculates an integer result for two input integers.",
+            "description": "Defines an integer result calculation method for two input integers.",
             "name": "BinaryOperation",
             "location": {
-              "start": 31,
-              "insert": 31,
+              "start": 59,
+              "insert": 55,
               "offset": " ",
               "indent": 4,
-              "comment": null
+              "comment": {
+                "start": 54,
+                "end": 58
+              }
             },
             "item_type": "interface",
             "length": 3,
-            "docLength": null
+            "docLength": 4
           }
         ]
       }
