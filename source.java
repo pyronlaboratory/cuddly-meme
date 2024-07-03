@@ -5,28 +5,21 @@ import java.util.function.Predicate;
 /**
  * Defines several methods and interfaces, including a `Runnable` for printing a
  * message, a `BinaryOperation` interface for calculating an integer result, and a
- * `Predicate` and `Consumer` for manipulating lists of strings. These methods
- * demonstrate the use of lambda expressions in Java for creating concise and expressive
- * code.
+ * `List` of strings that can be iterated over using various predicates and consumers.
  */
 public class Lambda {
     /**
-     * Demonstrates various concepts in Java programming, including lambda expressions,
-     * method references, streams, and consumer functions. Lambda expressions are used
-     * to create a `Runnable` object that prints "Hello, Lambda!", while method references
-     * are employed to implement an addition operator that takes two integers as input
-     * and returns their sum. Streams are used to filter a list of strings based on a
-     * provided predicate function, and consumer functions are applied to print the
-     * uppercase versions of each string in a list.
+     * Demonstrates various features of Java programming, including lambdas, methods
+     * reference, and stream processing. A lambda expression prints "Hello, Lambda!",
+     * while a method reference adds two numbers and calculates its result. The `names`
+     * list is processed using the `forEach()` method and `filter()` method to print names
+     * starting with "A" in uppercase.
      * 
-     * @param args 0 or more command-line arguments passed to the program, which are
-     * ignored in this case.
+     * @param args 0 or more command-line arguments passed to the `main` method when the
+     * program is launched directly from the command line, and it is ignored in this case.
      * 
-     * * Length: The `args` array has 0 or more elements, depending on the command-line
-     * arguments passed to the program.
-     * * Elements: Each element in the `args` array is a string representing a command-line
-     * argument.
-     * * Types: Each element in the `args` array can hold any type of string value.
+     * * Length: `args.length` returns the number of elements in the array.
+     * * Elements: Each element in the array is a string, representing a command-line argument.
      */
     public static void main(String[] args) {
         Runnable hello = () -> System.out.println("Hello, Lambda!");
@@ -52,7 +45,8 @@ public class Lambda {
     }
 
     /**
-     * Defines an operation that takes two integers and returns their integer result.
+     * Defines a single method, calculate(int, int), to return an integer result for two
+     * input integers.
      */
     interface BinaryOperation {
         int calculate(int a, int b);
