@@ -1,4 +1,21 @@
 
+/**
+ * @description Checks if a given value `x` exists within an array `arr` between two
+ * specified indices `start` and `end`. It returns `true` if the value is found, or
+ * `false` otherwise.
+ * 
+ * @param {array} arr - array to be searched for the specified value `x`.
+ * 
+ * @param {integer} x - value being searched for in the array.
+ * 
+ * @param {integer} start - index of the left half of the array to search within.
+ * 
+ * @param {integer} end - 2nd index of the array where the search should start after
+ * reaching the halfway point of the array.
+ * 
+ * @returns {boolean} a boolean indicating whether the value `x` is present in the
+ * array `arr` within the range `start` to `end`.
+ */
 const search = (arr, x, start, end) => {
   if (start > end) return false;
   let mid = Math.floor((start + end) / 2);
@@ -11,6 +28,12 @@ const search = (arr, x, start, end) => {
 };
 
 
+/**
+ * @description Retrieves the application ID based on the given parameters and logs
+ * the result to the pipeline.
+ * 
+ * @returns {integer} a unique identifier for the given application.
+ */
 const getApplicationID = () => {
   var appID = "";
   gs.log("appid: " + this.getParameter("sysparm_appName"), "pipeline");
