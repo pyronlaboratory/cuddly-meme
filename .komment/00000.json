@@ -4,12 +4,12 @@
     "path": "source.java",
     "content": {
       "structured": {
-        "description": "Several classes and interfaces, demonstrating various aspects of functional programming in Java. The `Lambda` class provides a platform for demonstrating lambda expressions, including a `Runnable` that prints a message, a `BinaryOperation` interface that calculates an integer result from two input integers, and a `Predicate` and `Consumer` that perform more advanced operations on input data. Additionally, the `List` class is used to store and manipulate lists of strings. Overall, the code showcases the versatility and expressiveness of functional programming in Java.",
+        "description": "Several methods and interfaces: `main` method that demonstrates usage of `Runnable`, `BinaryOperation`, and `Predicate` interfaces; `calculate` method in `BinaryOperation` interface that calculates an integer result for two input integers; `forEach` method in `List` interface that iterates over a list and applies a consumer function to each element.",
         "items": [
           {
-            "id": "7f028382-7a29-aba3-584b-fac9918914bc",
+            "id": "44fcddf3-4add-adb6-c44e-8c6be5cacbf6",
             "ancestors": [],
-            "description": "Defines several methods and interfaces, including a `Runnable` for printing a message, a `BinaryOperation` interface for calculating an integer result, and a `List` of strings that can be iterated over using various predicates and consumers.",
+            "description": "Defines several methods and interfaces for manipulating integers and strings. The `Runnable` `hello` prints \"Hello, Lambda!\" to the console, while the `BinaryOperation` `add` calculates the sum of two integers. A list of strings is also defined and processed using various methods, including filtering and printing in uppercase.",
             "name": "Lambda",
             "location": {
               "start": 5,
@@ -23,16 +23,16 @@
             "docLength": null
           },
           {
-            "id": "86cac59c-e61e-2e97-8a43-43349f0404ef",
+            "id": "49265e4b-6780-439f-754d-14c1d581f589",
             "ancestors": [
-              "7f028382-7a29-aba3-584b-fac9918914bc"
+              "44fcddf3-4add-adb6-c44e-8c6be5cacbf6"
             ],
-            "description": "Demonstrates various features of Java programming, including lambdas, methods reference, and stream processing. A lambda expression prints \"Hello, Lambda!\", while a method reference adds two numbers and calculates its result. The `names` list is processed using the `forEach()` method and `filter()` method to print names starting with \"A\" in uppercase.",
+            "description": "Demonstrates various Java features such as lambdas, methods references, streams, and Predicate classes to perform different operations on a collection of strings.",
             "params": [
               {
                 "name": "args",
                 "type_name": "String[]",
-                "description": "0 or more command-line arguments passed to the `main` method when the program is launched directly from the command line, and it is ignored in this case.\n\n* Length: `args.length` returns the number of elements in the array.\n* Elements: Each element in the array is a string, representing a command-line argument.",
+                "description": "array of command-line arguments passed to the program when it is executed directly from the command line, and can be used to perform actions based on their values.\n\n* `args` is an array of strings representing command-line arguments passed to the program.\n* The length of `args` can vary depending on how the program was invoked.",
                 "complex_type": true
               }
             ],
@@ -49,11 +49,11 @@
             "docLength": null
           },
           {
-            "id": "b1c57dc4-800c-5596-254e-99dcdfd1336e",
+            "id": "23ce6275-4801-dfa1-c745-11c200675107",
             "ancestors": [
-              "7f028382-7a29-aba3-584b-fac9918914bc"
+              "44fcddf3-4add-adb6-c44e-8c6be5cacbf6"
             ],
-            "description": "Defines a single method, calculate(int, int), to return an integer result for two input integers.",
+            "description": "Defines an int result calculation for two input integers.",
             "name": "BinaryOperation",
             "location": {
               "start": 33,

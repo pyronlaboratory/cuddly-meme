@@ -3,23 +3,23 @@ import java.util.List;
 import java.util.function.Consumer;
 import java.util.function.Predicate;
 /**
- * Defines several methods and interfaces, including a `Runnable` for printing a
- * message, a `BinaryOperation` interface for calculating an integer result, and a
- * `List` of strings that can be iterated over using various predicates and consumers.
+ * Defines several methods and interfaces for manipulating integers and strings. The
+ * `Runnable` `hello` prints "Hello, Lambda!" to the console, while the `BinaryOperation`
+ * `add` calculates the sum of two integers. A list of strings is also defined and
+ * processed using various methods, including filtering and printing in uppercase.
  */
 public class Lambda {
     /**
-     * Demonstrates various features of Java programming, including lambdas, methods
-     * reference, and stream processing. A lambda expression prints "Hello, Lambda!",
-     * while a method reference adds two numbers and calculates its result. The `names`
-     * list is processed using the `forEach()` method and `filter()` method to print names
-     * starting with "A" in uppercase.
+     * Demonstrates various Java features such as lambdas, methods references, streams,
+     * and Predicate classes to perform different operations on a collection of strings.
      * 
-     * @param args 0 or more command-line arguments passed to the `main` method when the
-     * program is launched directly from the command line, and it is ignored in this case.
+     * @param args array of command-line arguments passed to the program when it is
+     * executed directly from the command line, and can be used to perform actions based
+     * on their values.
      * 
-     * * Length: `args.length` returns the number of elements in the array.
-     * * Elements: Each element in the array is a string, representing a command-line argument.
+     * * `args` is an array of strings representing command-line arguments passed to the
+     * program.
+     * * The length of `args` can vary depending on how the program was invoked.
      */
     public static void main(String[] args) {
         Runnable hello = () -> System.out.println("Hello, Lambda!");
@@ -45,8 +45,7 @@ public class Lambda {
     }
 
     /**
-     * Defines a single method, calculate(int, int), to return an integer result for two
-     * input integers.
+     * Defines an int result calculation for two input integers.
      */
     interface BinaryOperation {
         int calculate(int a, int b);
