@@ -1,0 +1,73 @@
+[
+  {
+    "name": "source.java",
+    "path": "source.java",
+    "content": {
+      "structured": {
+        "description": "Several functionalities:\n\nIt demonstrates a basic Runnable class and how to use its run method for outputting \"Hello, Lambda!\" to the console. It also uses Predicate and Consumer classes from Java's Stream API to perform various operations on lists of strings. Additionally, it implements a BinaryOperation interface to demonstrate calculating an integer sum using a lambda expression.",
+        "items": [
+          {
+            "id": "9bbfd0f4-8263-44ba-7142-789c21ca0fad",
+            "ancestors": [],
+            "description": "Provides examples of functional programming concepts such as lambdas, consumers, and predicates. The main method defines several lambda expressions, including a `Runnable` that prints \"Hello, Lambda!\", a `BinaryOperation` that calculates the sum of two integers, and a `Consumer` that prints the uppercase version of a string. These lambdas are used to manipulate lists of strings in various ways, such as filtering and printing names that start with 'A'.",
+            "name": "LambdaDemo",
+            "location": {
+              "start": 6,
+              "insert": 6,
+              "offset": " ",
+              "indent": 0,
+              "comment": null
+            },
+            "item_type": "class",
+            "length": 29,
+            "docLength": null
+          },
+          {
+            "id": "5a969895-6175-08ae-5448-60e789b86c0e",
+            "ancestors": [
+              "9bbfd0f4-8263-44ba-7142-789c21ca0fad"
+            ],
+            "description": "Demonstrates various aspects of Java programming, including lambda expressions, method references, streams, and functional programming. It uses lambdas to print a message and perform an addition calculation, and it shows how to use method references to call a method and filter a list based on a condition.",
+            "params": [
+              {
+                "name": "args",
+                "type_name": "String[]",
+                "description": "0 or more command-line arguments passed to the `main()` function when it is invoked.\n\n* Length: `args.length`\n* Elements: `Arrays.asList(args)`",
+                "complex_type": true
+              }
+            ],
+            "name": "main",
+            "location": {
+              "start": 8,
+              "insert": 8,
+              "offset": " ",
+              "indent": 4,
+              "comment": null
+            },
+            "item_type": "method",
+            "length": 22,
+            "docLength": null
+          },
+          {
+            "id": "2c292ea5-4c3a-55ad-f24a-a7922bb45f4d",
+            "ancestors": [
+              "9bbfd0f4-8263-44ba-7142-789c21ca0fad"
+            ],
+            "description": "Defines an operation that takes two integer parameters and returns an integer result.",
+            "name": "BinaryOperation",
+            "location": {
+              "start": 31,
+              "insert": 31,
+              "offset": " ",
+              "indent": 4,
+              "comment": null
+            },
+            "item_type": "interface",
+            "length": 3,
+            "docLength": null
+          }
+        ]
+      }
+    }
+  }
+]
