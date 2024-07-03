@@ -1,20 +1,19 @@
 
 /**
- * @description Checks if a given value `x` exists within an array `arr` between two
- * specified indices `start` and `end`. It returns `true` if the value is found, or
- * `false` otherwise.
+ * @description Searches for an element `x` in a sorted array `arr` between indices
+ * `start` and `end`. It returns `true` if `x` is found before index `mid`, otherwise
+ * it recursively calls itself with the updated range.
  * 
- * @param {array} arr - array to be searched for the specified value `x`.
+ * @param {array} arr - 1D array to be searched for a specific element.
  * 
- * @param {integer} x - value being searched for in the array.
+ * @param {number} x - value being searched for in the array.
  * 
- * @param {integer} start - index of the left half of the array to search within.
+ * @param {number} start - index of the left edge of the subarray to search in.
  * 
- * @param {integer} end - 2nd index of the array where the search should start after
- * reaching the halfway point of the array.
+ * @param {number} end - 2nd point of the sorted array.
  * 
- * @returns {boolean} a boolean indicating whether the value `x` is present in the
- * array `arr` within the range `start` to `end`.
+ * @returns {boolean} a boolean value indicating whether the element `x` is present
+ * in the array between `start` and `end`.
  */
 const search = (arr, x, start, end) => {
   if (start > end) return false;
@@ -29,10 +28,10 @@ const search = (arr, x, start, end) => {
 
 
 /**
- * @description Retrieves the application ID based on the given parameters and logs
- * the result to the pipeline.
+ * @description Retrieves an application ID based on a given parameter and logs the
+ * result for debugging purposes.
  * 
- * @returns {integer} a unique identifier for the given application.
+ * @returns {integer} an integer representing the application ID.
  */
 const getApplicationID = () => {
   var appID = "";
@@ -46,23 +45,18 @@ const getApplicationID = () => {
 }
 
 /**
-* @description This function implements a simple iterative cellular automaton ruleset
-* where living cells (value of 1) survive with 2-3 living neighbors and die otherwise.
-* Dead cells turn into living cells if all eight adjacent cells are living. The
-* function takes an array of arrays representing the initial grid of cells and returns
-* the next generation of cells.
-* 
-* @param { array } cells - The `cells` input parameter is an array of arrays
-* representing a 2D grid of binary cells (0s and 1s). The function takes this array
-* as input and generates the next generation of the grid based on the current one.
-* 
-* @returns { array } The output returned by this function is an array of arrays
-* representing the next generation of a binary cellular automaton. Each element of
-* the output array represents a single row of the grid and contains Boolean values
-* (0 or 1) indicating whether each cell is alive (1) or dead (0). The cells are
-* evaluated based on their current state and the states of their neighboring cells
-* using a set of rules similar to Conway's Game of Life.
-*/
+ * @description Takes an array of cells as input, where each cell is a binary value
+ * (0 or 1). It generates a new generation of cells by iterating over the existing
+ * cells and updating the state of each cell based on its neighbors. The function
+ * returns an array of cells in the new generation.
+ * 
+ * @param {array} cells - 2D array of cells that are being simulated, and it is used
+ * to generate the next generation of cells through a process of cell division, growth,
+ * and death.
+ * 
+ * @returns {array} an array of booleans representing the alive cells in each row of
+ * the next generation.
+ */
 function newGeneration(cells) {
   const nextGeneration = []
   for (let i = 0; i < cells.length; i++) {
