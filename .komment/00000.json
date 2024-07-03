@@ -4,12 +4,12 @@
     "path": "source.java",
     "content": {
       "structured": {
-        "description": "Several functional and collections-related concepts: Lambda expressions, interfaces for single-method definitions, Predicate and Consumer classes, and Lists. The main method demonstrates how to use these concepts in practical scenarios, including printing a message with a lambda function, calculating an integer result with an interface definition, and iterating over a list with various filtering and transformation methods.",
+        "description": "Several functionalities: It introduces a `Runnable` object that prints \"Hello, Lambda!\" when run, defines an `add` method that performs addition and calculates its result, creates a list of strings and applies various filtering methods to it, and implements an interface `BinaryOperation` which defines an int-based calculation method.",
         "items": [
           {
-            "id": "09c39563-202f-78a8-cb45-47ffd3588971",
+            "id": "22ffe40e-a33e-72b9-514d-a51ba254f75e",
             "ancestors": [],
-            "description": "Defines several methods and interfaces, including a `Runnable` for printing a message, a `BinaryOperation` interface for calculating an integer result, a `List` of strings for manipulating names, and `Predicate` and `Consumer` interfaces for filtering and printing uppercase strings.",
+            "description": "Defines several methods and interfaces, including a `Runnable` for printing a message, a `BinaryOperation` interface for calculating an integer result, and a `Predicate` and `Consumer` for manipulating lists of strings. These methods demonstrate the use of lambda expressions in Java for creating concise and expressive code.",
             "name": "Lambda",
             "location": {
               "start": 5,
@@ -23,16 +23,16 @@
             "docLength": null
           },
           {
-            "id": "f72636a9-85ad-9ab0-dc49-3b186b497786",
+            "id": "51a2d681-c6bc-5f83-194b-a443e0514cc8",
             "ancestors": [
-              "09c39563-202f-78a8-cb45-47ffd3588971"
+              "22ffe40e-a33e-72b9-514d-a51ba254f75e"
             ],
-            "description": "Demonstrates various features of Java programming, including lambda expressions, method references, streams, and predicates.",
+            "description": "Demonstrates various concepts in Java programming, including lambda expressions, method references, streams, and consumer functions. Lambda expressions are used to create a `Runnable` object that prints \"Hello, Lambda!\", while method references are employed to implement an addition operator that takes two integers as input and returns their sum. Streams are used to filter a list of strings based on a provided predicate function, and consumer functions are applied to print the uppercase versions of each string in a list.",
             "params": [
               {
                 "name": "args",
                 "type_name": "String[]",
-                "description": "0 or more command-line arguments passed to the program when it is executed, which are ignored in this case and have no effect on the function's execution.\n\n* It is an array of strings representing the program's command-line arguments.\n* Its size may vary depending on how the program was launched.\n* Each element in the array corresponds to a separate argument passed to the program.",
+                "description": "0 or more command-line arguments passed to the program, which are ignored in this case.\n\n* Length: The `args` array has 0 or more elements, depending on the command-line arguments passed to the program.\n* Elements: Each element in the `args` array is a string representing a command-line argument.\n* Types: Each element in the `args` array can hold any type of string value.",
                 "complex_type": true
               }
             ],
@@ -47,6 +47,27 @@
             "item_type": "method",
             "length": 22,
             "docLength": null
+          },
+          {
+            "id": "41b035eb-bffc-a6b1-ee43-c4a01a048d5a",
+            "ancestors": [
+              "22ffe40e-a33e-72b9-514d-a51ba254f75e"
+            ],
+            "description": "Defines an operation that takes two integers and returns their integer result.",
+            "name": "BinaryOperation",
+            "location": {
+              "start": 33,
+              "insert": 29,
+              "offset": " ",
+              "indent": 4,
+              "comment": {
+                "start": 28,
+                "end": 32
+              }
+            },
+            "item_type": "interface",
+            "length": 3,
+            "docLength": 4
           }
         ]
       }
