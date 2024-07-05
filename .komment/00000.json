@@ -4,67 +4,76 @@
     "path": "source.java",
     "content": {
       "structured": {
-        "description": "Several functionalities:\n\nIt demonstrates a basic Runnable class and how to use its run method for outputting \"Hello, Lambda!\" to the console. It also uses Predicate and Consumer classes from Java's Stream API to perform various operations on lists of strings. Additionally, it implements a BinaryOperation interface to demonstrate calculating an integer sum using a lambda expression.",
+        "description": "Several functional programming concepts and demonstrates their usage through various lambda expressions. These include a `Runnable` that prints a message, a `BinaryOperation` that calculates the sum of two integers, a `List` of strings processed using different interfaces, and a `Consumer` that converts strings to uppercase. The code showcases the concise and flexible nature of lambda expressions in Java.",
         "items": [
           {
-            "id": "9bbfd0f4-8263-44ba-7142-789c21ca0fad",
+            "id": "c954363f-a38a-d4a8-a64c-6931b22cc577",
             "ancestors": [],
-            "description": "Provides examples of functional programming concepts such as lambdas, consumers, and predicates. The main method defines several lambda expressions, including a `Runnable` that prints \"Hello, Lambda!\", a `BinaryOperation` that calculates the sum of two integers, and a `Consumer` that prints the uppercase version of a string. These lambdas are used to manipulate lists of strings in various ways, such as filtering and printing names that start with 'A'.",
+            "description": "Demonstrates various functional programming concepts using lambdas, higher-order functions, and stream processing. The class includes a `Runnable` that prints a message, a binary operation that calculates the sum of two integers, and a list of strings processed using various functional interfaces. These lambda expressions allow for concise and flexible code execution.",
             "name": "LambdaDemo",
             "location": {
-              "start": 6,
+              "start": 14,
               "insert": 6,
               "offset": " ",
               "indent": 0,
-              "comment": null
+              "comment": {
+                "start": 5,
+                "end": 13
+              }
             },
             "item_type": "class",
-            "length": 29,
-            "docLength": null
+            "length": 49,
+            "docLength": 8
           },
           {
-            "id": "5a969895-6175-08ae-5448-60e789b86c0e",
+            "id": "d161e725-25bb-eaab-5f40-aeb670483944",
             "ancestors": [
-              "9bbfd0f4-8263-44ba-7142-789c21ca0fad"
+              "c954363f-a38a-d4a8-a64c-6931b22cc577"
             ],
-            "description": "Demonstrates various aspects of Java programming, including lambda expressions, method references, streams, and functional programming. It uses lambdas to print a message and perform an addition calculation, and it shows how to use method references to call a method and filter a list based on a condition.",
+            "description": "Demonstrates various aspects of Java programming: lambdas for functional programming, method references for inline functions, list and stream APIs for handling collections, and Predicate and Consumer interfaces for filtering and transforming data.",
             "params": [
               {
                 "name": "args",
                 "type_name": "String[]",
-                "description": "0 or more command-line arguments passed to the `main()` function when it is invoked.\n\n* Length: `args.length`\n* Elements: `Arrays.asList(args)`",
+                "description": "program's command-line arguments, which are passed to the `main()` method by the Java runtime environment when the program is launched from the command line.\n\n* `args` is an array of strings containing command-line arguments.\n* Its main property is that it contains multiple strings as its elements.",
                 "complex_type": true
               }
             ],
             "name": "main",
             "location": {
-              "start": 8,
-              "insert": 8,
+              "start": 32,
+              "insert": 16,
               "offset": " ",
               "indent": 4,
-              "comment": null
+              "comment": {
+                "start": 15,
+                "end": 31
+              }
             },
             "item_type": "method",
             "length": 22,
-            "docLength": null
+            "docLength": 16
           },
           {
-            "id": "2c292ea5-4c3a-55ad-f24a-a7922bb45f4d",
+            "id": "5cc8ddae-553f-06b6-c844-0ee59846bc28",
             "ancestors": [
-              "9bbfd0f4-8263-44ba-7142-789c21ca0fad"
+              "c954363f-a38a-d4a8-a64c-6931b22cc577"
             ],
-            "description": "Defines an operation that takes two integer parameters and returns an integer result.",
+            "description": "Defines a method to calculate an integer result for two input integers.",
             "name": "BinaryOperation",
             "location": {
-              "start": 31,
-              "insert": 31,
+              "start": 59,
+              "insert": 55,
               "offset": " ",
               "indent": 4,
-              "comment": null
+              "comment": {
+                "start": 54,
+                "end": 58
+              }
             },
             "item_type": "interface",
             "length": 3,
-            "docLength": null
+            "docLength": 4
           }
         ]
       }

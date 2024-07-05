@@ -4,26 +4,25 @@ import java.util.function.Consumer;
 import java.util.function.Predicate;
 
 /**
- * Provides examples of functional programming concepts such as lambdas, consumers,
- * and predicates. The main method defines several lambda expressions, including a
- * `Runnable` that prints "Hello, Lambda!", a `BinaryOperation` that calculates the
- * sum of two integers, and a `Consumer` that prints the uppercase version of a string.
- * These lambdas are used to manipulate lists of strings in various ways, such as
- * filtering and printing names that start with 'A'.
+ * Demonstrates various functional programming concepts using lambdas, higher-order
+ * functions, and stream processing. The class includes a `Runnable` that prints a
+ * message, a binary operation that calculates the sum of two integers, and a list
+ * of strings processed using various functional interfaces. These lambda expressions
+ * allow for concise and flexible code execution.
  */
 public class LambdaDemo {
 
     /**
-     * Demonstrates various aspects of Java programming, including lambda expressions,
-     * method references, streams, and functional programming. It uses lambdas to print
-     * a message and perform an addition calculation, and it shows how to use method
-     * references to call a method and filter a list based on a condition.
+     * Demonstrates various aspects of Java programming: lambdas for functional programming,
+     * method references for inline functions, list and stream APIs for handling collections,
+     * and Predicate and Consumer interfaces for filtering and transforming data.
      * 
-     * @param args 0 or more command-line arguments passed to the `main()` function when
-     * it is invoked.
+     * @param args program's command-line arguments, which are passed to the `main()`
+     * method by the Java runtime environment when the program is launched from the command
+     * line.
      * 
-     * * Length: `args.length`
-     * * Elements: `Arrays.asList(args)`
+     * * `args` is an array of strings containing command-line arguments.
+     * * Its main property is that it contains multiple strings as its elements.
      */
     public static void main(String[] args) {
         Runnable hello = () -> System.out.println("Hello, Lambda!");
@@ -49,7 +48,7 @@ public class LambdaDemo {
     }
 
     /**
-     * Defines an operation that takes two integer parameters and returns an integer result.
+     * Defines a method to calculate an integer result for two input integers.
      */
     interface BinaryOperation {
         int calculate(int a, int b);
